@@ -12,5 +12,5 @@ Run `npm run` for list of all available tasks.
 * `watch` – Watch for JavaScript and CSS file changes (both run in parallel)
 * `watch:js` – Watch for JavaScript file changes
 * `watch:css` – Watch for CSS file changes
-* `start` – Startup static server ([http://localhost:8080])
+* `start` – Startup static server (at port `8080` [:arrow_upper_right:](http://localhost:8080))
 * `lint` – Lint JavaScript files
