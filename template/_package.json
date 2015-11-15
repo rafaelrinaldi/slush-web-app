@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "xo": {
+    "envs": [
+      "browser",
+      "commonjs",
+      "es6"
+    ],
+    "esnext": true,
+    "space": true,
+    "rules": {
+      "space-before-function-paren": [2, "never"]<% if(~projectTools.indexOf('React')) { %>,
+      "react/jsx-uses-react": 2<% } %>
+    }<% if(~projectTools.indexOf('React')) { %>,
+    "plugins": ["react"]
+    <% } %>
+  },
+  "scripts": {
+    "build": "npm run build:js & npm run build:css",
+    "build:js": "browserify -e source/scripts/main.js -t [ babelify --presets [ es2015 stage-0 <%= ~projectTools.indexOf('React') ? 'react ' : '' %>] ] -o public/scripts.js",
+    "build:css": "cssnext source/styles/main.css public/styles.css",
+    "watch:js": "watchy -w source/scripts -- npm run build:js",
+    "watch:css": "watchy -w source/styles -- npm run build:css",
+    "watch": "npm run watch:js & npm run watch:css",
+    "start": "live-server public --port=8080 --host=localhost",
+    "lint": "xo source/scripts/*.js"
+  },
+  "devDependencies": {<% if(~projectTools.indexOf('React')) { %>
+    "babel-preset-react": "^6.1.18",
+    "eslint-plugin-react": "^3.8.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",<% } %>
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "cssnext": "^1.8.4",
+    "live-server": "^0.8.2",
+    "watchy": "^0.6.5",
+    "xo": "^0.10.0"
+  }
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= projectName %></title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body><% if(~projectTools.indexOf('React')) { %>
+  <div id="application"></div>
+  <% } else { %>
+  <h1>Hello World!</h1><% } %>
+  <script src="./scripts.js"></script>
+</body>
+</html>

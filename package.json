@@ -1,0 +1,33 @@
+{
+  "name": "slush-web-app",
+  "version": "1.0.0",
+  "description": "Scaffold a web app with Slush",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelrinaldi/slush-web-app.git"
+  },
+  "keywords": [
+    "slushgenerator",
+    "slush",
+    "node",
+    "generator",
+    "scaffold",
+    "boilerplate"
+  ],
+  "author": "Rafael Rinaldi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaelrinaldi/slush-web-app/issues"
+  },
+  "homepage": "https://github.com/rafaelrinaldi/slush-web-app#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-data": "^1.2.0",
+    "gulp-git": "^1.2.4",
+    "gulp-install": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^3.0.0",
+    "inquirer": "^0.9.0",
+    "sort-keys": "^1.1.1"
+  }
+}
